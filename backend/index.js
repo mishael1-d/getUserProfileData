@@ -8,9 +8,9 @@ const { gotScraping } = require("got-scraping");
   const end = Tok.body.indexOf("UserPage");
   const tikTokF = Tok.body.substring(start, end)
   .replaceAll("\\u002F", "\\")
-  .replaceAll("\n", ',')
-  .replaceAll(', \n', '')
   .replaceAll(' ', '')
+  // .replaceAll("\n", ',')
+  // .replaceAll(', \n', '')
   console.log(tikTokF);
 })();
 
