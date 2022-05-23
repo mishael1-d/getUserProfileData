@@ -10,6 +10,7 @@ const { gotScraping } = require("got-scraping");
   .replaceAll("\\u002F", "\\")
   .replaceAll("\n", ',')
   .replaceAll(', \n', '')
+  .replaceAll(' ', '')
   console.log(tikTokF);
 })();
 
