@@ -6,12 +6,15 @@ const { gotScraping } = require("got-scraping");
 
   const start = Tok.body.indexOf("ItemModule");
   const end = Tok.body.indexOf("UserPage");
-  const tikTokF = '{"' + Tok.body.substring(start, end) + '"}';
-  tikTokF.replaceAll("\\u002F", "\\").replace(',""', "");
+  const tikTokF = Tok.body.substring(start, end)
+  .replaceAll("\\u002F", "\\")
+  .replaceAll("\n", ',')
+  .replaceAll(', \n', '')
   console.log(tikTokF);
 })();
 
 
+
 // .slice(start, end)
-  // .replaceAll("\\u002F", "\\")
-  // .replace(',""', "");
+// .replaceAll("\\u002F", "\\")
+// .replace(',""', "");
