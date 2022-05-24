@@ -12,6 +12,7 @@
     "ejs": "^3.1.8",
     "express": "^4.18.1",
     "got-scraping": "^3.2.9",
+    "instagram-scraping": "^1.0.17",
     "node-fetch": "^2.6.1",
     "nodemon": "^2.0.16",
     "prompts": "^2.4.2",
@@ -21,8 +22,8 @@
     "tiktok-scraper": "^1.4.36"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev": "nodemon index.js"
+    "start": "node instagram.js",
+    "dev": "nodemon instagram.js"
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,6 @@
 const axios  = require("axios");
 const prompts= require( "prompts");
+// const ig = require("instagram-scraping")
 
 (async () => {
   console.log("Starting Terminal scraper…");
@@ -10,16 +11,16 @@ const prompts= require( "prompts");
   });
   console.log("Starting to scrape");
   //The input from the terminal can be found with response.username
-  //now we take that result and call getFollowers
-  getFollowers(response.username);
+  //now we take that result and call getUserData
+  getUserData(response.username);
 })();
 
-async function getFollowers(username) {
+async function getUserData(username) {
   try {
     const { data } = await axios.get(
       `https://www.instagram.com/${username}/?__a=1`
     );
-    user = data.graphql.user;
+    const user = data.graphql.user;
     const {
       biography,
       edge_followed_by,
@@ -41,7 +42,7 @@ async function getFollowers(username) {
     };
     console.log(graphql);
   } catch (error) {
-    console.log("USER NOT FOUND");
+    console.error(error);
     // throw Error(error);
   }
 }

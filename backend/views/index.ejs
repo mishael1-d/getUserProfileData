@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Profile Scraper</title>
+  </head>
+  <body>
+    <form action="/getprofile" method="POST">
+      <input type="text" name="username" id="" />
+      <input type="submit" value="Get Details" />
+    </form>
+    <% if(data) {%>
+    <div id="result">
+      <h1>Total Posts: <%=data.total%></h1>
+      <h2>Biography: <%=data.user.biography%></h2>
+      <h3>Full Name: <%=data.user.full_name%></h3>
+      <img src="<%=data.user.profile_pic_url%>"/>
+    </div>
+    <%}%>
+  </body>
+</html>
