@@ -1,6 +1,5 @@
-const axios  = require("axios");
+const axios = require("axios");
 const prompts= require( "prompts");
-// const ig = require("instagram-scraping")
 
 (async () => {
   console.log("Starting Terminal scraper…");
@@ -46,3 +45,42 @@ async function getUserData(username) {
     // throw Error(error);
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// async function instagramPhotos() {
+  //   // It will contain our photos' links
+  //   // const res = []
+  
+  //   try {
+  //     const userInfoSource = await axios.get(
+  //       "https://www.instagram.com/therock/?__a=1"
+  //     );
+  
+  //     // userInfoSource.data contains the HTML from Axios
+  //     const jsonObject = userInfoSource.data
+  //       .match(
+  //         /<script type="text\/javascript">window\._sharedData = (.*)<\/script>/
+  //       )[1]
+  //       .slice(0, -1);
+  
+  //     const userInfo = JSON.parse(jsonObject);
+  //     // Retrieve only the first 10 results
+  //     const mediaArray = userInfo.entry_data.ProfilePage[0].graphql.user;
+  
+  //     console.log(mediaArray);
+  //   } catch (error) {
+  //     console.error(error);
+  //     // throw Error(error);
+  //   }
+  // }
